@@ -25,8 +25,7 @@ SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 
 
-AWS_ACCESS_KEY_ID_ENV_KEY = "AKIA2GRZR7AV4LVDJ23K"
-AWS_SECRET_ACCESS_KEY_ENV_KEY = "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"
+
 REGION_NAME = "us-east-1"
 
 
