@@ -51,3 +51,4 @@ class TrainPipeline:
         model_pusher=ModelPusher(model_pusher_config=model_pusher_config,model_evaluation_artifact=self.start_model_evaluation())
         model_pusher_artifact=model_pusher.initiate_model_pusher()
         return model_pusher_artifact
+    
