@@ -1,6 +1,6 @@
 import sys
 import os
-from us_visa.constants import DATABASE_NAME, MONGODB_URL_KEY
+from us_visa.constants import DATABASE_NAME
 import pymongo
 import certifi
 
@@ -20,11 +20,11 @@ class MongoDBClient:
     def __init__(self, database_name=DATABASE_NAME) -> None:
         try:
             if MongoDBClient.client is None:
-                # The constants file provides the URL itself, but we check if an env var exists too
-                mongo_db_url = os.getenv("MONGODB_URL", MONGODB_URL_KEY)
+                # Get MongoDB URL from environment variable
+                mongo_db_url = os.getenv("MONGODB_URL")
                 if mongo_db_url is None:
-                    raise Exception(f"MongoDB URL is not set.")
-                MongoDBClient.client = pymongo.MongoClient("mongodb+srv://iijtabahasan:Ijtaba7195@cluster1.tonfxju.mongodb.net/?appName=Cluster1", tlsCAFile=ca)
+                    raise Exception(f"Environment variable MONGODB_URL is not set.")
+                MongoDBClient.client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca)
             self.client = MongoDBClient.client
             self.database = self.client[database_name]
             self.database_name = database_name

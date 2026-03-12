@@ -5,7 +5,7 @@ DATABASE_NAME = "Visa_Approval"
 
 COLLECTION_NAME = "Visa_Application"
 
-MONGODB_URL_KEY = "mongodb+srv://iijtabahasan:Ijtaba7195@cluster1.tonfxju.mongodb.net/?appName=Cluster1"
+# MongoDB URL should be set via MONGODB_URL environment variable
 
 PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"
