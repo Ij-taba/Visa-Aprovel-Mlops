@@ -12,7 +12,7 @@ try:
     # ss=pipeline.start_model_trainer()
     ss=pipeline.start_model_evaluation()
     sss=pipeline.start_model_pusher()
-    print(f"Artifact created: {artifact}")
+    print(f"Artifact create: {artifact}")
 except Exception as e:
     import traceback
     traceback.print_exc()
