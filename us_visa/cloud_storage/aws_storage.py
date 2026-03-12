@@ -204,7 +204,7 @@ class SimpleStorageService:
         Version     :   1.2
         Revisions   :   moved setup to cloud
         """
-        logging.info("Entered the upload_df_as_csv method of S3Operations class")
+        # logging.info("Entered the upload_df_as_csv method of S3Operations class")
 
         try:
             data_frame.to_csv(local_filename, index=None, header=True)
@@ -227,7 +227,7 @@ class SimpleStorageService:
         Version     :   1.2
         Revisions   :   moved setup to cloud
         """
-        logging.info("Entered the get_df_from_object method of S3Operations class")
+        # logging.info("Entered the get_df_from_object method of S3Operations class")
 
         try:
             content = self.read_object(object_, make_readable=True)
